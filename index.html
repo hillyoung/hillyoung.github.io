@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"><html>
+<title>app安装</title>
+<head>
+    <script type="text/javascript" src="./js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        // $.get("./app", function(data, status) {
+        //     console.log(data)
+        // });
+        //     $.get("/example/jquery/demo_test.asp",function(data,status){
+        //   alert("数据：" + data + "\n状态：" + status);
+        // });
+        function iframeOnLoad() {
+            // setTimeout(function() {
+                // console.log(document.getElementById("content").document.documentElement.outerHTML || "123")
+                // console.log(window.frames.myframe.document.body.innerHTML)
+                // console.log($("iframe").first().contents().find("a[href='.DS_Store']").text())
+                // $("iframe").first().contents().find("a[href='.DS_Store']").parent().remove()
+                // console.log($("iframe").contents().find("a").toArray())
+
+                var titles = $("iframe").contents().find("a").toArray().map(function(value, index){
+                    console.log(value.innerHTML.split("/").shift())
+                    // console.log(index)
+                    return value.innerHTML.split("/").shift()
+                })
+                console.log(titles)
+                // console.log($("#content").contents().find("a[href='.DS_Store']").text())
+            // }, 300)
+            // document.getElementById("content").background = 'green'
+            // document.getElementsByTagName("body").background = "green"
+            // console.log($('iframe').text())
+            // console.log($('a'))
+            // alert(123)
+        }
+    </script>
+    <script data-ad-client="ca-pub-7537639856241647" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+
+    <iframe id="content" src="./app" style="background-color: red;width: 100%;height: 100%;"  onload="setTimeout(function(){iframeOnLoad()}, 50)" ></iframe>
+
+</body>
+
+</html>
