@@ -12,8 +12,18 @@ window.open('<html></html>')
 <body>
 <form>
 <input type="button" value="打开窗口" onclick="open_win()">
-Select images: <input type="file" name="img" />
+Select images: <input id="file-chooser" style="margin-top:100px;" type="file" name="img" onmouseup="checkCameraAuthority()" />
 </form>
 </body>
+
+<script >
+
+    function checkCameraAuthority() {
+        console.log("122")
+        window.webkit.messageHandlers.scriptMessage.postMessage({
+            "method": "checkCameraAuthority"
+        });
+    }
+</script>
 
 </html>
