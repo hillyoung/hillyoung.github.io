@@ -57,3 +57,8 @@
 
     };
 })(jQuery);
+
+
+function installAppWithType(type) {
+    window.open('./install.html?type=' + type)
+}
