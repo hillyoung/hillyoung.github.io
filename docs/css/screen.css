@@ -1674,6 +1674,24 @@ body:not(.post-template) .post-title {
     display: block;
 }
 
+#app-content {
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+}
+
+#app-content img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+#app-content img:hover {
+    filter: unset !important;
+    -webkit-filter: unset !important;
+}
+
 
 /* ==========================================================================
    9. Footer - The bottom of every page
