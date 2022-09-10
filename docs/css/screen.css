@@ -1678,13 +1678,19 @@ body:not(.post-template) .post-title {
     position: fixed;
     bottom: 100px;
     right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #app-content img {
+    margin-top: 8px;
     width: 40px;
     height: 40px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
+    border-radius: 20px;
 }
 
 #app-content img:hover {
@@ -1692,6 +1698,14 @@ body:not(.post-template) .post-title {
     -webkit-filter: unset !important;
 }
 
+.tippy-box[data-theme~='light'] {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .tippy-box[data-theme~='light'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #fff;
+  }
 
 /* ==========================================================================
    9. Footer - The bottom of every page

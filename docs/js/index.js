@@ -23,6 +23,27 @@
         var year = new Date().getFullYear();
         var copyrightYear = year == 2022 ? year : "2022-" + year;
         $("#copyright").text("© " + copyrightYear + " 溧水丘壑网络技术服务 版权所有");
+
+
+        tippy("#app-content img", {
+            placement: 'left-end',
+            theme: 'light',
+            trigger:'click',
+            content: "<div id=\"qrcode\" style='width: 120px;height: 120px;'></div>",
+            onTrigger(instance, event) {
+                // ...
+                console.log(event.currentTarget.dataset.type)
+                // $('#qrcode').qrcode("this plugin is great");
+                // $('#qrcode').text('45646646464654')
+              },
+              onMount(instance) {
+                $('#qrcode').empty()
+                let type = instance.reference.dataset.type
+                let url = new URL("install.html?type=" + type ,window.location.href)
+                $('#qrcode').qrcode({width: 120,height: 120,text: url.toString()})
+              },
+            allowHTML: true,
+        });
     });
 
     // Arctic Scroll by Paul Adam Davis
