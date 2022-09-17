@@ -1701,6 +1701,7 @@ body:not(.post-template) .post-title {
 .tippy-box[data-theme~='light'] {
     background-color: #fff;
     color: #000;
+    box-shadow: 0 0 10px 2px #aaaaaa;
   }
 
   .tippy-box[data-theme~='light'][data-placement^='left'] > .tippy-arrow::before {
@@ -1717,7 +1718,7 @@ body:not(.post-template) .post-title {
     bottom: 0;
     width: 100%;
     margin: 0;
-    padding: 0.5rem 15px;
+    padding: 1rem 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
